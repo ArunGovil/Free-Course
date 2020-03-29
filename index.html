@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body color=#ebecfO>
+    <header id="header"><h1>Free Courses for Everyone</h1></header>
+     <h3>Here you can find a number of free courses available on the Internet right now!</h3>
+    <div class="search">
+        <input type="text" id="searchterm" onkeyup="searchFunction()" placeholder="Search Courses">
+        <button id="one" type="submit">
+            <i class="fa fa-search"></i>
+        </button> 
+    </div>
+    <br>
+     <table id="ntable">
+         <tr>
+             <th>Course Name</th>
+             <th>Category</th>
+             <th>Link</th>
+         </tr>
+         <tr>
+            <td>Mindshift</td>
+            <td>Personal Development</td>
+            <td>
+                <button type="button" class="butt" onclick="window.location.href='https://www.coursera.org/learn/mindshift';">
+                Select
+               </button>
+           </td>
+        </tr>
+             <td>Ahrefs Blogging for Business</td>
+             <td>Blogging</td>
+             <td>
+                 <button type="button" class="butt" onclick="window.location.href='https://ahrefs.com/academy/blogging-for-business';">
+                     Select
+                </button>
+            </td>
+         </tr>
+
+         <tr>
+            <td>Photoshop Fundamentals</td>
+            <td>Adobe Photoshop</td>
+            <td>
+                <button type="button" class="butt" onclick="window.location.href='https://coursesity.com/course-detail/photoshop-fundamentals';">
+                Select
+               </button>
+           </td>
+        </tr>
+    </tr>
+
+         <tr>
+            <td>Moz Academy SEO Training</td>
+            <td>SEO</td>
+            <td>
+                <button type="button" class="butt" onclick="window.location.href='https://moz.com/training';">
+                Select
+               </button>
+           </td>
+        </tr>
+
+        <tr>
+            <td>Crush Your Content</td>
+            <td>Content </td>
+            <td>
+                <button type="button" class="butt" onclick="window.location.href='https://courses.doyouevenblog.com/crush-your-content';">
+                Select
+               </button>
+           </td>
+        </tr>
+
+        <tr>
+            <td>Machine Learning for Business Professionals</td>
+            <td>Machine Learning</td>
+            <td>
+                <button type="button" class="butt" onclick="window.location.href='https://www.coursera.org/learn/machine-learning-business-professionals';">
+                Select
+               </button>
+           </td>
+        </tr>  
+
+        <tr>
+            <td>Backlink Training by LinkResearchTools</td>
+            <td>Backlink</td>
+            <td>
+                <button type="button" class="butt" onclick="window.location.href='https://www.linkresearchtools.com/seo-training/lrt-associate/';">
+                Select
+               </button>
+           </td>
+        </tr>
+
+        <tr>
+            <td>The Science of Success</td>
+            <td>Leadership & Management</td>
+            <td>
+                <button type="button" class="butt" onclick="window.location.href='https://www.coursera.org/learn/success';">
+                Select
+               </button>
+           </td>
+        </tr>
+
+        <tr>
+            <td>Criag Campbell SEO</td>
+            <td>SEO</td>
+            <td>
+                <button type="button" class="butt" onclick="window.location.href='https://craigs-school-3964.thinkific.com/enroll/303467?price_id=313162';">
+                Select
+               </button>
+           </td>
+        </tr>
+    </tr>
+
+<tr>
+    <td>Life of Happiness & Fulfillment</td>
+    <td>Psychology</td>
+    <td>
+        <button type="button" class="butt" onclick="window.location.href='https://www.coursera.org/learn/happiness';">
+        Select
+       </button>
+   </td>
+</tr>
+
+     </table>
+     <script>
+        function searchFunction() {
+          var input, filter, table, tr, td, i, txtValue;
+          input = document.getElementById("searchterm");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("ntable");
+          tr = table.getElementsByTagName("tr");
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            td2 = tr[i].getElementsByTagName("td")[1];
+            if (td || td2) {
+              txtValue = td.textContent || td.innerText;
+              txtValue2 = td2.textContent || td2.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1 || txtValue2.toUpperCase().indexOf(filter) > -1 ){
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            }       
+          }
+        }
+        </script>
+        <p id="bottom-line">Designed by <a id="arun" href="https://twitter.com/be_like_arun">Arun</a> &#10084;&#65039;</p>
+    </body> 
+</html>
