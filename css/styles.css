@@ -65,6 +65,7 @@ td{
 .butt:hover{
     background-color: greenyellow;
     color: black;
+    border-color: transparent;
 }
 .butt
 {
